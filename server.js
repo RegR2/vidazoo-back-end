@@ -9,7 +9,7 @@ require("dotenv").config();
 
 const directory = "http://localhost:3000";
 
-let port = process.env.PORT;
+let port = 5500;
 if (port == null || port == "") {
   port = 8000;
 }
