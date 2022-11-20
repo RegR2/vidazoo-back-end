@@ -5,12 +5,12 @@ const server = express();
 const domains = "/domains";
 const axios = require("axios");
 const fs = require("fs");
-require("dotenv").config();
+const dotenv = require("dotenv").config();
 
 const directory = "http://localhost:3000";
 
-let port = 5500;
-if (port == null || port == "") {
+let port = process.env.PORT;
+if (!port || port == "") {
   port = 8000;
 }
 
